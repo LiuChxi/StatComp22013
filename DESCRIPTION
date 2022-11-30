@@ -1,0 +1,15 @@
+Package: StatComp22013
+Type: Package
+Title: Statistical Calculation Course Final Summary
+Version: 1.0
+Date: 2022-11-30
+Author: Chunxi Liu
+Maintainer: Chunxi Liu <liuchunxi@mail.ustc.edu.cn>
+Description: Several R and Rcpp function are included in this package for illustration. 
+License: GPL (>= 2)
+Imports: Rcpp, microbenchmark, knitr, rmarkdown, ggplot2, boot, bootstrap, DAAG, MASS, stats, graphics
+LinkingTo: Rcpp
+RoxygenNote: 7.2.1
+Encoding: UTF-8
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
