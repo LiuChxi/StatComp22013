@@ -2,8 +2,7 @@
 using namespace Rcpp;
 
 //' @title A gibbs sampler using Rcpp
-//' @description Implement A gibbs sampler using Rcpp for generating the 
-//' two-dimensional normal distribution
+//' @description Implement A gibbs sampler using Rcpp for generating the two-dimensional normal distribution
 //' @param N Number of random numbers
 //' @param rho Correlation coefficient of two-dimensional normal distribution
 //' @param mu1 Mean value of the first normal distribution

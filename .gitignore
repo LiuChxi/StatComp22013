@@ -1,10 +1,2 @@
-inst/doc
-doc
-Meta
+.DS_Store
 .Rproj.user
-src/*.o
-src/*.so
-src/*.dll
-.DS_Store # macOS Files
-/doc/
-/Meta/
