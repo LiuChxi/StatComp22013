@@ -1,7 +1,7 @@
 ---
 title: "Homework by 22013"
 author: '22013'
-date: "12/2/2019"
+date: "12/2/2022"
 output: html_document
 vignette: >
   %\VignetteIndexEntry{Introduction to StatComp22013}
