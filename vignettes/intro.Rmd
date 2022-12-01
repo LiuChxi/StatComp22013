@@ -1,4 +1,23 @@
-## -----------------------------------------------------------------------------
+---
+title: "Introduction to StatComp22013"
+author: '22013'
+date: '2022-11-30'
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to StatComp22013}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+## Function:bmykmeans
+
+This function calculate the center of K-mean cluster using R and return the cluster of each point.The following is the basic idea of the algorithm.
+
+1. Initialize the data, and select k objects as the center point.
+2. Traverse the entire dataset, calculate the distance between each point and each center point, and assign it to the group closest to the center.
+3. Recalculate the average value of each group as the new cluster center.
+4. In the above 2-3 steps, the process is repeated until the function converges and no new grouping occurs.
+
+```{r}
 bmykmeans<-function(dataset,k){
   rowdata<-nrow(dataset)
   continue.change=TRUE
@@ -49,8 +68,21 @@ bmykmeans<-function(dataset,k){
   #Return results, including the coordinates of the center point, the location of each point from each center point, and the cluster name of each data point
   return(result)
 }
+```
 
-## -----------------------------------------------------------------------------
+K-means algorithm also has some shortcomings, which is sensitive to outliers and will be affected by some extreme values.
+
+## Function:bmymixnorsam
+
+This function can generate a mixed distribution of two normal distributions in mode 1 and a two-dimensional normal distribution in mode 2. Mode 1 adopts independent sampling algorithm with normal distribution as the  proposed distribution, and mode 2 adopts gibbs sampling algorithm.
+
+1. mode 1:mixed distribution
+In this model, the normal distribution is taken as the proposed distribution, and the independent sampling algorithm is used for random number sampling.
+
+2. mode 2:two-dimensional normal distribution
+In this mode, gibbs sampling algorithm is used for random number sampling.
+
+```{r}
 bmymixnorsam<-function(mode,burn,p,mu1,sigma1,mu2,sigma2,mu0,sigma0,m,rho){
   if(mode == 1){
     f<-function(s){
@@ -110,4 +142,5 @@ bmymixnorsam<-function(mode,burn,p,mu1,sigma1,mu2,sigma2,mu0,sigma0,m,rho){
   }
   
 }
+```
 
